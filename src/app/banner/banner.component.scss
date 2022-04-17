@@ -4,4 +4,12 @@
   .banner-title {
     margin-top: 5em;
   }
+
+  .banner-image-container {
+    margin-top: 5em;
+    .banner-image {
+      width: 21%;
+      border-radius: 1em;
+    }
+  }
 }
