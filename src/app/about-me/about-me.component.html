@@ -4,10 +4,30 @@
     <h1 fxFlex>About Me</h1>
   </div>
   <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center" fxLayoutGap="2em" class="about-me-info">
-    <div fxFlex="50" class="about-me-image-container" fxLayoutAlign="space-around center">
+    <div fxFlex="50" fxFlex.lt-lg="100" class="about-me-image-container" fxLayoutAlign="space-around center">
       <div class="about-me-image-background"></div>
       <img src="/assets/images/photo-2.jpg" class="about-me-image"/>
     </div>
-    <div fxFlex="50"></div>
+    <div fxFlex="50" fxLayout="column" fxFlex.lt-lg="100">
+      <div fxFlex="100" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center" class="achievement-section" >
+        <div fxFlex="22" fxFlex.lt-lg="100" fxLayoutAlign="space-around center" fxLayout="column" fxLayoutGap="2em">
+          <fa-icon class="icon" fxFlex [icon]="iconTrophy"></fa-icon>
+          <p fxFlex>Experience</p>
+          <span fxFlex>5+ Years Working</span>
+        </div>
+        <div fxFlex="22" fxFlex.lt-lg="100" fxLayoutAlign="space-around center" fxLayout="column" fxLayoutGap="2em">
+          <fa-icon class="icon" fxFlex [icon]="iconTrophy"></fa-icon>
+          <p fxFlex>Experience</p>
+          <span fxFlex>5+ Years Working</span>
+        </div>
+        <div fxFlex="22" fxFlex.lt-lg="100" fxLayoutAlign="space-around center" fxLayout="column" fxLayoutGap="2em">
+          <fa-icon class="icon" fxFlex [icon]="iconTrophy"></fa-icon>
+          <p fxFlex>Experience</p>
+          <span fxFlex>5+ Years Working</span>
+        </div>
+      </div>
+      <div fxFlex="100"></div>
+      <div fxFlex="100"></div>
+    </div>
   </div>
 </div>
