@@ -41,9 +41,20 @@
     }
   }
 
-  .about-me-container {
+  .about-me-text-container {
     .about-me-text {
       line-height: 2em;
+    }
+  }
+
+  .about-me-button-container {
+    button {
+      background: $secondary-color;
+    }
+
+    button:hover {
+      background: $primary-color;
+      border: 1px solid #e2e2e2;
     }
   }
 }
