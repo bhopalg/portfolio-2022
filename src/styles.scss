@@ -2,7 +2,24 @@
 
 $primary-color: rgb(56, 58, 112);
 $secondary-color: rgb(91, 180, 240);
+$text-color: #fff;
+
+@font-face {
+  font-family: san-francisco;
+  src: url(assets/fonts/SFNSText-Medium.otf) format("opentype");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'san-francisco', 'arial', sans-serif;
+}
 
 body {
   background: $primary-color;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $text-color;
 }
