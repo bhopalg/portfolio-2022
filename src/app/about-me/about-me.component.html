@@ -8,7 +8,7 @@
       <div class="about-me-image-background"></div>
       <img src="/assets/images/photo-2.jpg" class="about-me-image"/>
     </div>
-    <div fxFlex="50" fxLayout="column" fxFlex.lt-lg="100">
+    <div fxFlex="50" fxLayout="column" fxFlex.lt-lg="100" fxLayoutGap="1em">
       <div fxFlex="100" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-evenly center" class="achievement-section" fxLayoutGap="1em">
         <div class="achievement-box" fxFlex="25" fxFlex.lt-lg="100" fxLayoutAlign="space-evenly center" fxLayout="column" fxLayoutGap="2em">
           <fa-icon class="icon" fxFlex [icon]="iconTrophy"></fa-icon>
@@ -26,7 +26,11 @@
           <span fxFlex>80+ completed</span>
         </div>
       </div>
-      <div fxFlex="100"></div>
+      <div fxFlex="100" fxLayoutAlign="start center" class="about-me-container">
+        <p class="about-me-text">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        </p>
+      </div>
       <div fxFlex="100"></div>
     </div>
   </div>
