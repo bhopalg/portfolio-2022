@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {faCoffee, faTrophy} from '@fortawesome/free-solid-svg-icons';
+import {faCoffee, faPerson, faProjectDiagram, faTrophy} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about-me',
@@ -8,6 +8,8 @@ import {faCoffee, faTrophy} from '@fortawesome/free-solid-svg-icons';
 })
 export class AboutMeComponent implements OnInit {
   iconTrophy = faTrophy;
+  iconPerson = faPerson;
+  iconProjectDiagram = faProjectDiagram;
   constructor() { }
 
   ngOnInit(): void {
