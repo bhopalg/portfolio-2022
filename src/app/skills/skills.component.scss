@@ -1,11 +1,11 @@
 @import "src/styles";
 
-.my-experiences-container {
+.skills-container {
   fa-icon{
     color: $secondary-color;
   }
 
-  .experience-container {
+  .skill-container {
     background: $tertiary-color;
     border-radius: 1em;
     padding-left: 2em;
@@ -15,16 +15,16 @@
       padding-top: 2em;
     }
 
-    .experience {
+    .skill {
       padding: 2em;
 
-      .experience-description {
+      .skill-description {
         margin-bottom: 2em;
       }
     }
   }
 
-  .experience-container:hover {
+  .skill-container:hover {
     background: $primary-color;
     border: 1px solid #e2e2e2;
     transition: 0.3s;

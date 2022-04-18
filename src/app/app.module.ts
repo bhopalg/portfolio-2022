@@ -7,14 +7,14 @@ import { BannerComponent } from 'src/app/banner/banner.component';
 import { AboutMeComponent } from 'src/app/about-me/about-me.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import { MyExperienceComponent } from 'src/app/my-experience/my-experience.component';
+import { SkillsComponent } from 'src/app/skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BannerComponent,
     AboutMeComponent,
-    MyExperienceComponent
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,
