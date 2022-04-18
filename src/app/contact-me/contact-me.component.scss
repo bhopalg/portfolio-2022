@@ -1,0 +1,24 @@
+@import "src/styles";
+
+.contact-me-container {
+  .contact-me-options {
+    .option1, .option2, .option3 {
+      border-radius: 1em;
+      background: $tertiary-color;
+      padding-bottom: 1.5em;
+      padding-top: 1.5em;
+      cursor: pointer;
+
+      fa-icon {
+        color: $text-color;
+        font-size: 1.5em;
+      }
+    }
+
+    .option1:hover, .option2:hover, .option3:hover {
+      border: 1px solid #e2e2e2;
+      transition: 0.3s;
+      background: $primary-color;
+    }
+  }
+}

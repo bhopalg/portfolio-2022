@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {faEnvelopeSquare, faMailBulk} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-contact-me',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactMeComponent implements OnInit {
 
+  iconEnvelopeSquare = faEnvelopeSquare;
   constructor() { }
 
   ngOnInit(): void {

@@ -3,8 +3,8 @@
 .experiences-container {
   .experience-card {
     background: $tertiary-color;
-    border: 1px solid #e2e2e2;
     border-radius: 1em;
+    cursor: pointer;
 
     .experience-card-header {
       width: 100%;
@@ -32,5 +32,16 @@
         }
       }
     }
+
+    .experience-card-body:hover {
+      background: $primary-color;
+      transition: 0.3s;
+    }
+  }
+
+  .experience-card:hover {
+    border: 1px solid #e2e2e2;
+    transition: 0.3s;
+    background: $primary-color;
   }
 }
