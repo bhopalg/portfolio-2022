@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {ChangeDetectorRef, Component, ElementRef} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio-2022';
+
+  contactMeRef: ElementRef | undefined;
+
+  constructor(private changeRef: ChangeDetectorRef) {}
+
+  contactMeRefEmit(event: ElementRef): void {
+    this.contactMeRef = event;
+    this.changeRef.detectChanges();
+  }
 }

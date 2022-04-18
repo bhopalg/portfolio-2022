@@ -1,18 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import {faEnvelopeSquare, faExternalLinkSquare, faMailBulk} from "@fortawesome/free-solid-svg-icons";
+import { AfterViewInit, Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
-export class ContactMeComponent implements OnInit {
+export class ContactMeComponent implements AfterViewInit {
 
   iconEnvelopeSquare = faEnvelopeSquare;
-  iconExternalLinkSquare = faExternalLinkSquare;
+
+  @ViewChild('contactMe') contactMeRef: ElementRef | undefined;
+  @Output() emitContactMeRef: EventEmitter<ElementRef> = new EventEmitter<ElementRef>();
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngAfterViewInit() {
+    this.emitContactMeRef.emit(this.contactMeRef);
   }
 
 }

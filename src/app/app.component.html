@@ -1,8 +1,8 @@
 <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="8em">
   <app-banner fxFlex="100"></app-banner>
-  <app-about-me fxFlex="100"></app-about-me>
+  <app-about-me [contactMeRef]="contactMeRef" fxFlex="100"></app-about-me>
   <app-skills fxFlex="100" style="width: 100%"></app-skills>
   <app-experiences fxFlex="100" style="width: 100%"></app-experiences>
-  <app-contact-me fxFlex="100" style="width: 100%"></app-contact-me>
+  <app-contact-me (emitContactMeRef)="contactMeRefEmit($event)" fxFlex="100" style="width: 100%"></app-contact-me>
   <app-footer fxFlex="100" style="width: 100%"></app-footer>
 </div>
