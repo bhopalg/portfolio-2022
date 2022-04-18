@@ -9,6 +9,8 @@ import { AboutMeComponent } from 'src/app/about-me/about-me.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SkillsComponent } from 'src/app/skills/skills.component';
 import { ExperiencesComponent } from 'src/app/experiences/experiences.component';
+import { ContactMeComponent } from 'src/app/contact-me/contact-me.component';
+import { FooterComponent } from 'src/app/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { ExperiencesComponent } from 'src/app/experiences/experiences.component'
     AboutMeComponent,
     SkillsComponent,
     ExperiencesComponent,
+    ContactMeComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
