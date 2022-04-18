@@ -1,1 +1,31 @@
-<p>experiences works!</p>
+<div class="experiences-container" fxLayoutGap="3em" fxLayout="column">
+  <div fxFlex="100" fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="space-around center" class="experience-header">
+    <h5 fxFlex>What experience I have</h5>
+    <h1 fxFlex class="header">My Experiences</h1>
+  </div>
+  <div fxFlex="100" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center">
+    <div fxFlex="40" fxLayout="column" fxFlex.lt-lg="100" class="experience-card">
+      <div fxFlex="100" class="experience-card-header" fxLayoutAlign="space-around center">
+        <h4>Web Development</h4>
+      </div>
+      <div fxFlex="100" class="experience-card-body" fxLayout="column" fxLayoutGap="2em" fxLayoutAlign="start">
+        <div fxFlex="100" fxLayout="row" fxLayoutGap="1em" class="experience-card-text-container">
+          <div fxFlex="5">
+            <fa-icon [icon]="iconCheck"></fa-icon>
+          </div>
+          <div fxFlex="95" fxLayout="column" fxLayoutGap="1em">
+            <p class="skill-description">Text</p>
+          </div>
+        </div>
+        <div fxFlex="100" fxLayout="row" fxLayoutGap="1em" class="experience-card-text-container">
+          <div fxFlex="5">
+            <fa-icon [icon]="iconCheck"></fa-icon>
+          </div>
+          <div fxFlex="95" fxLayout="column" fxLayoutGap="1em">
+            <p class="skill-description">Text</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

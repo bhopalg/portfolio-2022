@@ -1,0 +1,36 @@
+@import "src/styles";
+
+.experiences-container {
+  .experience-card {
+    background: $tertiary-color;
+    border: 1px solid #e2e2e2;
+    border-radius: 1em;
+
+    .experience-card-header {
+      width: 100%;
+      background: $secondary-color;
+      padding: 2em 0;
+      border-radius: 1em 1em 2em 2em;
+      justify-content: center;
+
+      h4 {
+        color: $primary-color;
+      }
+    }
+
+    .experience-card-body {
+      background: $tertiary-color;
+      padding-top: 2.2em;
+      border-radius: 1em;
+      padding-bottom: 2.2em;
+
+      .experience-card-text-container {
+        padding-left: 2em;
+
+        fa-icon {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}
