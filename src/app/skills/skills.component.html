@@ -3,11 +3,11 @@
     <h5 fxFlex>What Skills I Have</h5>
     <h1 fxFlex class="header">My Skills</h1>
   </div>
-  <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center" fxLayoutGap="2em">
-    <div class="skill-container" fxFlex="40" fxFlex.lt-lg="100" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="2.5em" *ngFor="let ex of skillKeys">
+  <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center" fxLayoutGap="2em" *ngFor="let group of skillKeys">
+    <div class="skill-container" fxFlex="40" fxFlex.lt-lg="100" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="2.5em" *ngFor="let ex of getObjectKeys(skills[group])">
       <h4 fxFlex="100" class="title">{{ex}}</h4>
-      <div fxFlex="100" fxLayout="row" class="wrap skill" fxLayout.lt-lg="column" fxLayoutGap="2em">
-        <div fxFlex="40" fxLayout="row" *ngFor="let d of skills[ex]">
+      <div fxFlex="100" fxLayout="row" class="wrap skill" fxLayout.lt-lg="column" fxLayoutGap="3em">
+        <div fxFlex="40" fxLayout="row" *ngFor="let d of skills[group][ex]">
           <div fxFlex="20">
             <fa-icon [icon]="iconCircleCheck"></fa-icon>
           </div>
