@@ -3,26 +3,18 @@
     <h5 fxFlex>What experience I have</h5>
     <h1 fxFlex class="header">My Experiences</h1>
   </div>
-  <div fxFlex="100" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center">
-    <div fxFlex="40" fxLayout="column" fxFlex.lt-lg="100" class="experience-card">
+  <div fxFlex="100" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center" *ngFor="let group of experienceKeys">
+    <div fxFlex="40" fxLayout="column" fxFlex.lt-lg="100" class="experience-card" *ngFor="let ex of getObjectKeys(experiences[group])">
       <div fxFlex="100" class="experience-card-header" fxLayoutAlign="space-around center">
-        <h4>Web Development</h4>
+        <h4>{{ex}}</h4>
       </div>
       <div fxFlex="100" class="experience-card-body" fxLayout="column" fxLayoutGap="2em" fxLayoutAlign="start">
-        <div fxFlex="100" fxLayout="row" fxLayoutGap="1em" class="experience-card-text-container">
+        <div fxFlex="100" fxLayout="row" fxLayoutGap="1em" class="experience-card-text-container" *ngFor="let experience of experiences[group][ex].text">
           <div fxFlex="5">
             <fa-icon [icon]="iconCheck"></fa-icon>
           </div>
           <div fxFlex="95" fxLayout="column" fxLayoutGap="1em">
-            <p class="skill-description">Text</p>
-          </div>
-        </div>
-        <div fxFlex="100" fxLayout="row" fxLayoutGap="1em" class="experience-card-text-container">
-          <div fxFlex="5">
-            <fa-icon [icon]="iconCheck"></fa-icon>
-          </div>
-          <div fxFlex="95" fxLayout="column" fxLayoutGap="1em">
-            <p class="skill-description">Text</p>
+            <p class="skill-description">{{experience.text}}</p>
           </div>
         </div>
       </div>
