@@ -1,11 +1,10 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit } from '@angular/core';
-import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import {
   BreakpointObserver,
   Breakpoints,
   BreakpointState
 } from '@angular/cdk/layout';
-import {Subject, takeUntil} from "rxjs";
+import { Subject, takeUntil } from "rxjs";
 
 @Component({
   selector: 'app-banner',
@@ -15,7 +14,6 @@ import {Subject, takeUntil} from "rxjs";
 export class BannerComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<boolean> = new Subject<boolean>();
 
-  iconEnvelopeSquare = faEnvelopeSquare;
   hideScrollDownText = false;
   isMobile = false;
   @Input() aboutMeRef: ElementRef | undefined;

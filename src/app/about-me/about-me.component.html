@@ -1,4 +1,4 @@
-<div class="about-me" fxLayoutGap="3em" fxLayout="column">
+<div class="about-me" fxLayoutGap="3em" fxLayout="column" [ngClass.lt-lg]="{'about-me-mobile': isMobile}">
   <div fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="space-around center" class="about-me">
     <h5 fxFlex>Get To Know</h5>
     <h1 fxFlex class="header">About Me</h1>

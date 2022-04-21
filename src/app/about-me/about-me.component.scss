@@ -60,4 +60,13 @@
   }
 }
 
+.about-me-mobile {
+  .achievement-box {
+    width: 90% !important;
+  }
 
+  .about-me-text, .about-me-button-container {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
