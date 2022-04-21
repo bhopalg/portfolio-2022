@@ -16,17 +16,19 @@ export class BannerComponent implements OnInit, OnDestroy {
   private ngUnsubscribe: Subject<boolean> = new Subject<boolean>();
 
   iconEnvelopeSquare = faEnvelopeSquare;
-  showScrollDownText = true;
+  hideScrollDownText = false;
+  isMobile = false;
   @Input() aboutMeRef: ElementRef | undefined;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
   ngOnInit() {
     this.breakpointObserver
-      .observe([Breakpoints.Small, Breakpoints.XSmall])
+      .observe([Breakpoints.Small, Breakpoints.XSmall, Breakpoints.Handset])
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe((state: BreakpointState) => {
-        this.showScrollDownText = !state.matches;
+        this.hideScrollDownText = state.matches;
+        this.isMobile = state.matches;
       });
   }
 

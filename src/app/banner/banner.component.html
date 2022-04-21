@@ -1,18 +1,18 @@
-<div fxLayout="row" fxLayoutAlign="space-around center" class="banner">
-  <div fxFlex="10" fxLayout="column" fxLayoutGap="0.5em" class="banner-links">
-    <a href="mailto:gbhopal@icloud.com" fxFlex="100">
-      <fa-icon [icon]="iconEnvelopeSquare"></fa-icon>
+<div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center" class="banner" [ngClass.lt-lg]="{'mobile-banner': isMobile}">
+  <div fxFlex="10" fxLayout="column" fxLayout.lt-lg="row" fxLayoutGap="0.5em" fxLayoutGap.lt-lg="2em" class="banner-links">
+    <a href="mailto:gbhopal@icloud.com" fxFlex="100" fxFlex.lt-lg>
+      <img src="/assets/images/email-icon.svg"  alt="email" class="email-icon"/>
     </a>
-    <div fxFlex="100">-------</div>
-    <a href="https://www.linkedin.com/in/gurpreet-bhopal-063a6a73">
+    <div fxFlex="100" fxFlex.lt-lg *ngIf="!isMobile">-------</div>
+    <a href="https://www.linkedin.com/in/gurpreet-bhopal-063a6a73" fxFlex="100" fxFlex.lt-lg>
       <img src="/assets/images/linkedin-icon.svg"  alt="linkedin" class="linkedin-icon"/>
     </a>
-    <div fxFlex="100">-------</div>
-    <a href="https://twitter.com/GBhopal">
+    <div fxFlex="100" fxFlex.lt-lg *ngIf="!isMobile">-------</div>
+    <a href="https://twitter.com/GBhopal" fxFlex="100" fxFlex.lt-lg>
       <img src="/assets/images/twitter-icon.svg"  alt="twitter" class="twitter-icon"/>
     </a>
-    <div fxFlex="100">-------</div>
-    <a href="https://github.com/bhopalg">
+    <div fxFlex="100" fxFlex.lt-lg *ngIf="!isMobile">-------</div>
+    <a href="https://github.com/bhopalg" fxFlex="100" fxFlex.lt-lg>
       <img src="/assets/images/github-icon.svg"  alt="github" class="github-icon"/>
     </a>
   </div>
@@ -26,7 +26,7 @@
       <img src="/assets/images/photo-1.jpeg" class="banner-image" alt="banner-image"/>
     </div>
   </div>
-  <div fxFlex="10" class="scroll-text" *ngIf="showScrollDownText">
+  <div fxFlex="10" class="scroll-text" *ngIf="!hideScrollDownText">
     <button (click)="scrollDown()"><h4>Scroll down >>></h4></button>
   </div>
 </div>

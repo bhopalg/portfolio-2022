@@ -18,16 +18,8 @@
     color: $text-color;
 
     img {
+      height: 100%;
       filter: invert(60%) sepia(82%) saturate(484%) hue-rotate(176deg) brightness(97%) contrast(93%);
-    }
-
-    fa-icon {
-      font-size: 1.7em;
-      color: $secondary-color;
-    }
-
-    fa-icon:hover {
-      color: $text-color;
     }
 
     img:hover {
@@ -42,5 +34,15 @@
     button {
       background: transparent;
     }
+  }
+}
+
+.mobile-banner {
+  .banner-links {
+    margin-top: 2em;
+  }
+
+  .banner-image {
+    width: 50% !important;
   }
 }
