@@ -1,10 +1,10 @@
-<div class="contact-me-container" fxLayoutGap="3em" fxLayout="column" #contactMe>
+<div class="contact-me-container" fxLayoutGap="3em" fxLayout="column" #contactMe [ngClass.lt-lg]="{'contact-me-mobile': isMobile}">
   <div fxFlex="100" fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="space-around center" class="contact-me-header">
     <h5 fxFlex>Ways to contact me</h5>
     <h1 fxFlex class="header">Contact Me</h1>
   </div>
-  <div fxLayout="row" fxLayoutAlign="space-around center" class="contact-me-options">
-    <a href="mailto:gbhopal@icloud.com" fxFlex="20" fxLayoutAlign="space-around center" class="option1" fxLayout="column" fxLayoutGap="2em">
+  <div fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="space-around center" class="contact-me-options">
+    <a href="mailto:gbhopal@icloud.com" fxFlex="20" fxFlex.lt-lg="100" fxLayoutAlign="space-around center" class="option1" fxLayout="column" fxLayoutGap="2em">
       <div fxFlex="100">
         <fa-icon [icon]="iconEnvelopeSquare"></fa-icon>
       </div>
@@ -16,7 +16,7 @@
         <p class="link">Send Email</p>
       </div>
     </a>
-    <a href="https://www.linkedin.com/in/gurpreet-bhopal-063a6a73" target="_blank" fxFlex="20" fxLayoutAlign="space-around center" class="option2" fxLayout="column" fxLayoutGap="2em">
+    <a href="https://www.linkedin.com/in/gurpreet-bhopal-063a6a73" target="_blank" fxFlex="20" fxFlex.lt-lg="100" fxLayoutAlign="space-around center" class="option2" fxLayout="column" fxLayoutGap="2em">
       <div fxFlex="100">
         <img src="/assets/images/linkedin-icon.svg"  alt="linkedin" class="linkedin-icon"/>
       </div>
@@ -28,7 +28,7 @@
         <p class="link">View Page</p>
       </div>
     </a>
-    <a href="https://twitter.com/GBhopal" target="_blank" fxFlex="20" fxLayoutAlign="space-around center" class="option3" fxLayout="column" fxLayoutGap="2em">
+    <a href="https://twitter.com/GBhopal" target="_blank" fxFlex="20" fxFlex.lt-lg="100" fxLayoutAlign="space-around center" class="option3" fxLayout="column" fxLayoutGap="2em">
       <div fxFlex="100">
         <img src="/assets/images/twitter-icon.svg"  alt="twitter" class="twitter-icon"/>
       </div>
@@ -40,7 +40,7 @@
         <p class="link">View Page</p>
       </div>
     </a>
-    <a href="https://github.com/bhopalg" target="_blank" fxFlex="20" fxLayoutAlign="space-around center" class="option4" fxLayout="column" fxLayoutGap="2em">
+    <a href="https://github.com/bhopalg" target="_blank" fxFlex="20" fxFlex.lt-lg="100" fxLayoutAlign="space-around center" class="option4" fxLayout="column" fxLayoutGap="2em">
       <div fxFlex="100">
         <img src="/assets/images/github-icon.svg"  alt="twitter" class="github-icon"/>
       </div>
