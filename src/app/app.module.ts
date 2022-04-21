@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { LayoutModule } from "@angular/cdk/layout";
 
 import { AppComponent } from 'src/app/app.component';
 import { BannerComponent } from 'src/app/banner/banner.component';
@@ -26,7 +27,8 @@ import { FooterComponent } from 'src/app/footer/footer.component';
     BrowserModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

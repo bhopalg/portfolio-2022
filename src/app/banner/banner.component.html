@@ -26,7 +26,7 @@
       <img src="/assets/images/photo-1.jpeg" class="banner-image" alt="banner-image"/>
     </div>
   </div>
-  <div fxFlex="10" class="scroll-text">
+  <div fxFlex="10" class="scroll-text" *ngIf="showScrollDownText">
     <button (click)="scrollDown()"><h4>Scroll down >>></h4></button>
   </div>
 </div>
