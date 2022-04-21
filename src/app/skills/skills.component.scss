@@ -34,3 +34,13 @@
     flex-wrap: wrap;
   }
 }
+
+.skill-mobile {
+  .skill-container {
+    width: 90% !important;
+
+    .skill {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+import {Subject, takeUntil} from "rxjs";
+import {BreakpointObserver, Breakpoints, BreakpointState} from "@angular/cdk/layout";
 
 interface Skill {
   name: string;
@@ -17,8 +19,11 @@ interface Skills {
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss']
 })
-export class SkillsComponent implements OnInit {
-  iconCircleCheck = faCircleCheck
+export class SkillsComponent implements OnInit, OnDestroy {
+  private ngUnsubscribe: Subject<boolean> = new Subject<boolean>();
+
+  isMobile = false;
+  iconCircleCheck = faCircleCheck;
 
   skills: Skills = {
     'group1': {
@@ -103,11 +108,21 @@ export class SkillsComponent implements OnInit {
 
   skillKeys: string[] = Object.keys(this.skills);
 
-  constructor() { }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.breakpointObserver
+      .observe([Breakpoints.Small, Breakpoints.XSmall, Breakpoints.Handset])
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((state: BreakpointState) => {
+        this.isMobile = state.matches;
+      });
   }
 
   getObjectKeys = (data: { [p: string]: Skill[] }) => Object.keys(data);
 
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next(true);
+    this.ngUnsubscribe.complete();
+  }
 }

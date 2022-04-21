@@ -1,4 +1,4 @@
-<div class="skills-container" fxLayoutGap="3em" fxLayout="column">
+<div class="skills-container" fxLayoutGap="3em" fxLayout="column" [ngClass.lt-lg]="{'skill-mobile': isMobile}">
   <div fxFlex="100" fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="space-around center" class="skills-header">
     <h5 fxFlex>What Skills I Have</h5>
     <h1 fxFlex class="header">My Skills</h1>
