@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, ElementRef} from '@angular/core';
+import { ChangeDetectorRef, Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',

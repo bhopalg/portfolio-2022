@@ -12,4 +12,27 @@
       border-radius: 1em;
     }
   }
+
+  .banner-links {
+    text-align: center;
+    color: $text-color;
+
+    img {
+      filter: invert(60%) sepia(82%) saturate(484%) hue-rotate(176deg) brightness(97%) contrast(93%);
+    }
+
+    fa-icon {
+      font-size: 1.7em;
+      color: $secondary-color;
+    }
+
+    fa-icon:hover {
+      color: $text-color;
+    }
+
+    img:hover {
+      filter: invert(100%) sepia(96%) saturate(0%) hue-rotate(78deg) brightness(104%) contrast(106%);
+    }
+  }
+
 }
