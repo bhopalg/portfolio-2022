@@ -45,3 +45,14 @@
     background: $primary-color;
   }
 }
+
+.experiences-mobile {
+  .experience-card {
+    width: 90% !important;
+    margin-top: 2em;
+
+    h4 {
+      text-align: center;
+    }
+  }
+}

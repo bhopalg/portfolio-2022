@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-import {faCheck} from "@fortawesome/free-solid-svg-icons";
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import { faCheck} from "@fortawesome/free-solid-svg-icons";
+import { BreakpointObserver, Breakpoints, BreakpointState } from "@angular/cdk/layout";
+import {Subject, takeUntil} from "rxjs";
 
 interface Experiences {
   [key: string]: {
@@ -15,9 +17,11 @@ interface Experiences {
   templateUrl: './experiences.component.html',
   styleUrls: ['./experiences.component.scss']
 })
-export class ExperiencesComponent {
-  iconCheck = faCheck;
+export class ExperiencesComponent implements OnInit, OnDestroy {
+  private ngUnsubscribe: Subject<boolean> = new Subject<boolean>();
 
+  iconCheck = faCheck;
+  isMobile = false;
   experiences: Experiences = {
     'group1': {
       'Smarter Data Solutions: Whites Recycling Project': {
@@ -60,5 +64,19 @@ export class ExperiencesComponent {
   experienceKeys: string[] = Object.keys(this.experiences);
   getObjectKeys = (data: { [p: string]: { text: Array<{ text: string }>, link?: string } }) => Object.keys(data);
 
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
+  ngOnInit() {
+    this.breakpointObserver
+      .observe([Breakpoints.Small, Breakpoints.XSmall, Breakpoints.Handset])
+      .pipe(takeUntil(this.ngUnsubscribe))
+      .subscribe((state: BreakpointState) => {
+        this.isMobile = state.matches;
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next(true);
+    this.ngUnsubscribe.complete();
+  }
 }

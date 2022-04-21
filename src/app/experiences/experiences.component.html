@@ -1,4 +1,4 @@
-<div class="experiences-container" fxLayoutGap="3em" fxLayout="column">
+<div class="experiences-container" fxLayoutGap="3em" fxLayout="column" [ngClass.lt-lg]="{'experiences-mobile': isMobile}">
   <div fxFlex="100" fxLayout="column" fxLayoutGap="1em" fxLayoutAlign="space-around center" class="experience-header">
     <h5 fxFlex>What experience I have</h5>
     <h1 fxFlex class="header">My Experiences</h1>
